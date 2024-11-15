@@ -21,7 +21,7 @@ all_stocks.append("^GSPC")
 # TODAY = date.today().strftime("%Y-%m-%d")
 
 # components
-st.title('StockSense')
+st.title('Fortune Stockie')
 st.write('An AI-powered tool for financial analysis')
 selected_stock = st.selectbox("Select a stock", all_stocks)
 
@@ -121,21 +121,6 @@ def get_ai_summary_plus(financial_info, api_key):
 
     summary = response.choices[0].message.content
     return summary
-
-# @st.cache_data
-# def get_ai_summary(financial_info, api_key):
-#     client = OpenAI(api_key=api_key)
-#     data_summary = f"""
-#     Based on the current financial information {financial_info['longName']}, summarize and comment on the company's financial position
-#     """
-
-#     response = client.chat.completions.create(
-#         model="gpt-3.5-turbo",
-#         messages=[{"role": "user", "content": data_summary}]
-#     )
-
-#     summary = response.choices[0].message.content
-#     return summary
 
 st.markdown("##### Integrated ChatGPT summary")
 openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
