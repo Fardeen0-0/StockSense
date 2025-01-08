@@ -155,4 +155,4 @@ try:
     output = completion.choices[0].message.content
     st.write(output)
 except:
-    st.info("To ask chatgpt, you need to enter a valid api.")
+    st.info("To ask chatgpt, you need to enter a valid api key.")
