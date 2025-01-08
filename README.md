@@ -1,4 +1,4 @@
-# Fortune-Stockie
+# Stock Sense
 An AI-powered financial analyst
 
 ## Notes
